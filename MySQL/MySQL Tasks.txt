@@ -1,0 +1,60 @@
+TASK 1:
+
+USE world;
+SHOW Tables;
+SELECT*FROM city;
+SELECT COUNT(CountryCode = 'USA') FROM city;
+
+TASK 2:
+
+USE world;
+SHOW Tables;
+SELECT*FROM country;
+SELECT LifeExpectancy FROM country WHERE Code = 'ARG';
+
+TASK 3:
+
+USE world;
+SHOW Tables;
+SELECT*FROM country;
+SELECT MAX(LifeExpectancy )FROM country WHERE LifeExpectancy IS NOT NULL  LIMIT 1;
+
+TASK 4:
+
+USE world;
+SHOW Tables;
+SELECT*FROM city;
+SELECT city.ID, city.Name, city.CountryCode FROM city
+INNER JOIN country ON city.ID=country.Capital;
+SELECT Name FROM city WHERE CountryCode = 'ESP' LIMIT 1;
+
+TASK 5:
+
+USE world;
+SHOW Tables;
+SELECT*FROM countrylanguage;
+SELECT*FROM country;
+SELECT*FROM city;
+SELECT countrylanguage.Language, countrylanguage.CountryCode FROM countrylanguage
+INNER JOIN country ON country.Code=countrylanguage.CountryCode;
+SELECT Language FROM country WHERE Region = 'Southeast Asia';
+
+TASK 6:
+
+USE world;
+SHOW Tables;
+SELECT NAME FROM city WHERE NAME LIKE 'f%' ORDER BY NAME ASC LIMIT 25;
+
+TASK 7:
+
+USE world;
+SHOW Tables;
+SELECT*FROM city;
+SELECT COUNT(ID) FROM city ci JOIN country co ON ci.CountryCode-co.Code WHERE co.Name = 'China';
+
+TASK 8:
+
+USE world;
+SHOW Tables;
+SELECT*FROM country;
+SELECT Name, Population FROM country WHERE Population > '0' ORDER BY Population ASC Limit 1;

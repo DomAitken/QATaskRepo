@@ -41,4 +41,50 @@ describe('Basic testing process', function() {
 
     });
 
+    it('5 x 4 should equal 20', function() {
+
+        // Arrange - declaring my variables
+        let num1 = 5;
+        let num2 = 4;
+        let sum;
+
+        // Act - What am I testing
+        sum = num1 * num2;
+
+        // Assert - uses expect from our chai
+        expect(sum).to.equal(20);
+
+    });
+
+    it('the string should be "Hello"', function() {
+
+        // Arrange
+        let testString;
+
+        // Act
+        testString = "Hello";
+
+        // Assert
+        expect(testString).to.equal("Hello");
+        expect(testString).to.be.a('string');
+
+    });
+
+    it('5 x 4 should equal 20', function() {
+
+        // Arrange - declaring my variables
+        let num1 = 1;
+        let num2 = 2;
+        let num3 = 3;
+        let num4 = 4;
+        let sum;
+
+        // Act - What am I testing
+        sum = num1 + num2 + num3 + num4;
+
+        // Assert - uses expect from our chai
+        expect(sum).to.equal(10);
+
+    });
+
 });

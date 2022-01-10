@@ -87,4 +87,44 @@ describe('Basic testing process', function() {
 
     });
 
+    it('the text should be null', function() {
+
+        // Arrange
+        let testString;
+
+        // Act
+        testString = "text";
+
+        // Assert
+        expect(testString).to.equal("text");
+        expect(testString).to.be.a('null');
+
+    });
+
+    it('An object should have a property of name', function() {
+        let obj;
+        obj = {
+            name: 'Rick Astley',
+            name = obj
+        }
+        expect(obj).to.have.a.property('name');
+    });
+
+    it('Should print the word "Hello"', function() {
+        console.log("Hello");
+    });
+
+    it('Number 12 should not be undefined.', function() {
+
+        // Arrange - declaring my variables
+        let num = 12;
+
+        // Act - What am I testing
+        num = defined;
+
+        // Assert - uses expect from our chai
+        expect(num).to.not.be.undefined;
+
+    });
+
 });

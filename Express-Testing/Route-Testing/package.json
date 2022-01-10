@@ -1,17 +1,19 @@
 {
-  "name": "mongooseproject",
+  "name": "route-testing",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dom",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "mongoose": "^6.1.5",
-    "nodemon": "^2.0.15"
-  },
-  "description": ""
+    "mongoose": "^6.1.5"
+  }
 }

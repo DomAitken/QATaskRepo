@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const {Game} = require('../persistence/models/games.js')
+const { Game } = require('../persistence/models/games.js')
 
 router.get("/getAll", (req, res) => {
     Game.find((error, games) => {
@@ -28,5 +28,18 @@ router.delete('/delete/:id', (req, res) => {
         res.status(204);
     });
 });
+
+router.post('/create', (req, res, next) => {
+    const body = req.body;
+    console.log(body);
+    const game = new Game(body);
+    game.save().then((result) => {
+            res.status(201).send(`${result.gameName} has been added.`);
+        })
+        .catch((error) => { //ERROR HANDLING
+            const err = new Error(`Object requires a name.`);
+            next(err);
+        })
+})
 
 module.exports = router;

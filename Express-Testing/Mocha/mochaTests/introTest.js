@@ -1,6 +1,6 @@
 describe('My first group of tests', function() {
     it('Should print the word hello', function() {
-        console.log("Hello");
+        console.log("Hello World!");
     });
 });
 

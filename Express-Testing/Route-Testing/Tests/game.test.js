@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 describe('Route testing', function() {
     it('Should respond with "Test path successful"', function(done) {
         chai.request(server)
-            .get('/test')
+            .get('/games/test')
             .end((err, res) => {
                 if (err) {
                     console.log("Error ocurred.");

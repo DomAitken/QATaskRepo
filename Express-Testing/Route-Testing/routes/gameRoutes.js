@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Game } = require('../persistence/models/games.js')
+const { Game } = require('../models/games.js')
 
 router.get('/test', (req, res) => {
     res.status(201).send("Test path successful");

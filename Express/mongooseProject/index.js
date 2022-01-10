@@ -24,6 +24,46 @@ app.use((err, req, res, next) => {
     res.status(500).send(err.message);
 });
 
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(404).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(405).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(400).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(403).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(401).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(500).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(501).send(err.message);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(502).send(err.message);
+});
+
 const server = app.listen(5015, () => {
     console.log(`Server started successfully on port ${server.address().port}.`);
 });

@@ -7,18 +7,16 @@ const userReviewsSchema = new Schema({ name: String, review: Number });
 const gameSchema = new Schema({
     gameName: {
         type: String,
-        required: false,
         minlength: 2
     },
     genre: {
-        gameType: String,
-        required: true,
-        minlength: 3
+        gameType: String
     },
     price: {
         priceType: Number,
         required: true,
-        min: [0, 'Minimum is 0']
+        min: [0, 'Minimum is 0'],
+        max: [99.99, 'Minimum is 99.99']
     },
     isGood: Boolean,
     userReviews: [userReviewsSchema],

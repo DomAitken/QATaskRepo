@@ -8,16 +8,21 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/db_games', {useNewUrlParser: true}, 
-(error) => {
-    if (error) {
-        console.log("Can't connect to database.");
-    } else if (!error) {
-        console.log("Connected successfully.");
-    }
-});
+mongoose.connect('mongodb://localhost:27017/db_games', { useNewUrlParser: true },
+    (error) => {
+        if (error) {
+            console.log("Can't connect to database.");
+        } else if (!error) {
+            console.log("Connected successfully.");
+        }
+    });
 
 app.use('/game/', gameRoutes);
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(500).send(err.message);
+});
 
 const server = app.listen(5015, () => {
     console.log(`Server started successfully on port ${server.address().port}.`);

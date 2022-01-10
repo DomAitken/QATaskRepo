@@ -120,7 +120,7 @@ describe('Basic testing process', function() {
         let num = 12;
 
         // Act - What am I testing
-        num = defined;
+        num = 12;
 
         // Assert - uses expect from our chai
         expect(num).to.not.be.undefined;

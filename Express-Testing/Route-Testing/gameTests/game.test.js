@@ -9,7 +9,6 @@ describe('Route testing', function() {
     const testGame = {
         gameName: "testName",
         genre: "testGenre",
-        price: 5,
         isGood: true
     }
 
@@ -61,6 +60,42 @@ describe('Route testing', function() {
                     expect(games).to.contain.keys("gameName");
                 });
                 done();
+                console.log(resBody);
+            });
+    });
+
+    it('Should delete an item from the database that has been chosen by ID', function(done) {
+        chai.request(server)
+            .delete('/games/delete/:id')
+            .end((err, res) => {
+                if (err) {
+                    console.log("Error Ocurred.");
+                    done(err);
+                };
+                expect(res).to.have.status(200);
+                expect(res).to.not.be.null;
+                expect(res).to.have.property('text', `Game has been deleted.`)
+            })
+    });
+
+    it('Should retrieve a single record from the database', function(done) {
+        chai.request(server)
+            .get('/games/get/:id')
+            .end((err, res) => {
+                if (err) {
+                    console.log("Error Ocurred.");
+                    done(err);
+                };
+
+                const resBody = res.body;
+                expect(res).to.have.status(200);
+                expect(resBody).to.not.be.null;
+                resBody.map((games) => {
+                    expect(games).to.be.a("Object");
+                    expect(games).to.contain.keys("gameName");
+                    done();
+                });
+                console.log(resBody);
             });
     });
 });

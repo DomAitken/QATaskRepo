@@ -1,11 +1,11 @@
 const ContactCard = ({name, phoneNum, imageUrl, quote, address}) => {
     return (
         <div>
-            <h2>Name of customer is {name}.</h2>
-            <h2>Phone number is {phoneNum}.</h2>
-            <h2>Image URL is {imageUrl}.</h2>
-            <h2>Quote is {quote}.</h2>
-            <h2>Address is {address}</h2>
+            <h4>Name of customer is {name}, Phone number is {phoneNum}, Image of pet: {imageUrl}, Quote is {quote}, Address is {address}.</h4>
+            {/* <h4>Phone number is {phoneNum}.</h4>
+            <h4>Image URL is {imageUrl}.</h4>
+            <h4>Quote is {quote}.</h4>
+            <h4>Address is {address}</h4> */}
         </div>
     );
 }

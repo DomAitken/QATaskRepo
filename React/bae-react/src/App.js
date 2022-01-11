@@ -1,11 +1,13 @@
 import './css/App.css';
+import CompWithVars from './components/component-vars/CompWithVars.jsx';
+import HelloWorld from './components/HelloWorld.jsx';
 
-function HelloWorld() {
+function helloWorld() {
     return (<div className = "App">
         <HelloWorld/>
-
-            </div>
+        <CompWithVars/>
+    </div>
     );
 }
 
-export default HelloWorld;
+export default helloWorld;

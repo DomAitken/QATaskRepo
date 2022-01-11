@@ -1,11 +1,13 @@
 import './css/App.css';
-import CompWithVars from './components/component-vars/CompWithVars.jsx';
-import HelloWorld from './components/HelloWorld.jsx';
+// import CompWithVars from './components/component-vars/CompWithVars.jsx';
+// import HelloWorld from './components/HelloWorld.jsx';
+import Parent from './components/Parent-Child/Parent.jsx';
 
 function helloWorld() {
     return (<div className = "App">
-        <HelloWorld/>
-        <CompWithVars/>
+        {/* <HelloWorld/>
+        <CompWithVars/> */}
+        <Parent/>
     </div>
     );
 }

@@ -8,7 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/db_games', { useNewUrlParser: true },
+let dbURI = "games";
+// let dbURI = "testGames"; Test DB URI
+
+mongoose.connect(`mongodb://localhost:27017/${dbURI}`, { useNewUrlParser: true },
     (error) => {
         if (error) {
             console.log("Can't connect to database.");

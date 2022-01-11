@@ -18,16 +18,16 @@ const gameSchema = new Schema({
         min: [0, 'Minimum is 0'],
         max: [99.99, 'Minimum is 99.99']
     },
-    isGood: Boolean,
-    userReviews: [userReviewsSchema],
-    user: {
-        userName: String,
-        review: {
-            type: Number,
-            min: [0, 'Minimum is 0'],
-            max: [10, 'Maximum is 10']
-        }
-    }
+    isGood: Boolean
+        // userReviews: [userReviewsSchema],
+        // user: {
+        //     userName: String,
+        //     review: {
+        //         type: Number,
+        //         min: [0, 'Minimum is 0'],
+        //         max: [10, 'Maximum is 10']
+        //     }
+        // }
 });
 
 const Game = model('Game', gameSchema);

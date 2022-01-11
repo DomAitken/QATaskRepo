@@ -6,6 +6,29 @@ const server = require('../index.js')
 chai.use(chaiHttp);
 
 describe('Route testing', function() {
+
+    let testID;
+
+    before(function(done) {
+        console.log("Setup of environment.");
+        const testGame = new Game({
+            "gameName": "test name",
+            "genre": "test genre",
+            "isGood": true
+        });
+        testGame.save().then((result) => {
+            testID = result._id.toString();
+            done();
+        });
+    });
+
+    after(function(done) {
+        Game.deleteMany({}).then(() => {
+            console.log("Everything deleted.");
+            done();
+        })
+    })
+
     const testGame = {
         gameName: "testName",
         genre: "testGenre",

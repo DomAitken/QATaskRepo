@@ -57,7 +57,7 @@ describe('Route testing', function() {
                 expect(res).to.have.status(200);
                 expect(resBody).to.not.be.null;
                 resBody.map((games) => {
-                    expect(games).to.be.a.Arguments("Object");
+                    expect(games).to.be.a("Object");
                     expect(games).to.contain.keys("gameName");
                 });
                 done();

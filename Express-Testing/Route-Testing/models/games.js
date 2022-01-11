@@ -12,12 +12,12 @@ const gameSchema = new Schema({
     genre: {
         gameType: String
     },
-    price: {
-        priceType: Number,
-        required: true,
-        min: [0, 'Minimum is 0'],
-        max: [99.99, 'Minimum is 99.99']
-    },
+    // price: {
+    //     priceType: Number,
+    //     required: true,
+    //     min: [0, 'Minimum is 0'],
+    //     max: [99.99, 'Minimum is 99.99']
+    // },
     isGood: Boolean
         // userReviews: [userReviewsSchema],
         // user: {

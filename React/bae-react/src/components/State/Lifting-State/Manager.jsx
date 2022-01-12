@@ -19,7 +19,7 @@ const Manager = () => {
         <div>
             <h3>Manager</h3>
             <Product setProductName={setProductName} setQty={setQty} addBasket={addToBasket} productName={productName} qty={qty}/>
-            <Basket productName={productName} qty={qty} basket={basket} setBasket={setBasket}/>
+            <Basket basket={basket}/>
         </div>
     );
 };

@@ -1,7 +1,12 @@
-const Basket = () => {
+const Basket = ({basket}) => {
     return ( 
-        <h3>Basket</h3>
-     );
+        <div>
+            <h3>Basket</h3>
+            {basket.map((product) => {
+                console.log(product);
+        })}
+        </div>
+    );
 }
  
 export default Basket;

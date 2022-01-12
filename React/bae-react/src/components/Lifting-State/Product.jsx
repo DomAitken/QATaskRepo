@@ -6,6 +6,7 @@ const Product = ({setProductName, setQty, addBasket, productName, qty}) => {
             quantity : qty
         }
         addBasket(order);
+        console.log(order);
     };
 
     return ( 

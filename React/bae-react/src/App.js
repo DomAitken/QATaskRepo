@@ -9,8 +9,8 @@ import './css/App.css';
 // import Manager from './components/State/Manager';
 // import ControlledInput from './components/Forms/ControlledInput';
 // import UserPassComp from './components/State/Exercises/UserPassComp';
-import SearchTable from './components/state-exercises/SearchTable';
-
+// import SearchTable from './components/state-exercises/SearchTable';
+import Manager from './components/State/Lifting-State/Manager';
 
 function App() {
     return (<div className = "App">
@@ -24,7 +24,8 @@ function App() {
         {/* <Manager/> */}
         {/* <Manager/> */}
         {/* <ControlledInput/> */}
-        <SearchTable/>
+        {/* <SearchTable/> */}
+        <Manager/>
     </div>
     );
 }

@@ -1,10 +1,14 @@
+import SubChild from "./SubChild";
+
 const Child = (props) => {
 
-    const array = props.arrayFruits;
-    console.log(array);
+    const fruitArray = props.array;
+    console.log(fruitArray);
 
-    return ( 
-        <h2>Bonjour</h2>
+    return (
+        <div> 
+            {fruitArray.map((fruit, i) => <SubChild key={i} fruit={fruit}/> )} 
+        </div>
     );
 }
  

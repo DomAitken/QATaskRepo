@@ -7,13 +7,16 @@
 import './css/App.css';
 // import CompWithVars from './components/component-vars/CompWithVars.jsx';
 // import HelloWorld from './components/HelloWorld.jsx';
-import ContactCardManager from './components/ContactCard-Task/ContactCardManager';
+// 
+import ParentArray from "./components/Props/Array/Parent";
+
 
 function App() {
     return (<div className = "App">
         {/* <HelloWorld/>
         <CompWithVars/> */}
-        <ContactCardManager/>
+        {/* <ContactCardManager/> */}
+        <ParentArray/>
     </div>
     );
 }

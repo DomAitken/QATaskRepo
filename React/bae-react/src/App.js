@@ -10,7 +10,8 @@ import './css/App.css';
 // import ControlledInput from './components/Forms/ControlledInput';
 // import UserPassComp from './components/State/Exercises/UserPassComp';
 // import SearchTable from './components/state-exercises/SearchTable';
-import Manager from './components/State/Lifting-State/Manager';
+// import Manager from './components/State/Lifting-State/Manager';
+import Clock from './components/useEffect/Clock';
 
 function App() {
     return (<div className = "App">
@@ -25,7 +26,8 @@ function App() {
         {/* <Manager/> */}
         {/* <ControlledInput/> */}
         {/* <SearchTable/> */}
-        <Manager/>
+        {/* <Manager/> */}
+        <Clock/>
     </div>
     );
 }

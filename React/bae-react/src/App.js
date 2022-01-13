@@ -51,13 +51,14 @@ function App() {
                     
                 <Route path="/about" exact element={<About/>}/>
 
-                <Route path="/shop" exact element={<Shop/>}/>
+                <Route path="/shop/:id" exact element={<Shop/>}/>
 
                 <Route path='/forum' exact element={<Forum/>}/>
             
                 <Route path='/checkout' exact element={<Checkout/>}/>
             
                 <Route path='/child' exact element={<Child/>}/>
+            
             </Routes>
             <Footer/>
         </BrowserRouter>

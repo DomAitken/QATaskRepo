@@ -9,21 +9,36 @@ const Bar = () => {
 
     const [loaded, setLoaded] = useState(false);
 
-    useEffect();
 
     const getData = () => {
+        console.log(beerData);
         axios.get('/https://api.punkapi.com/v2/beers')
         .then((response) => {
             setLoaded(true);
-            
+
             console.log(response);
-            setBeerData(response);
-        });
+            setBeerData(response.data)
+            console.log("==========================");
+            console.log(response.data);
+            console.log(beerData);
+        })
+        .catch((error) => {
+            setLoaded(true);
+            setError(error);
+        })
+        .then(() => {
+            setTimeout(() => {
+                console.log("=====================");
+                console.log(beerData);
+            }, 2000);
+        })
     }
-        
+    
+    useEffect(getData(), [beerData]);
+
     return ( 
         <div>
-
+    
         </div>
     );
 }

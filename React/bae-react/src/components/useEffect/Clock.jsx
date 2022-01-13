@@ -21,7 +21,7 @@ const Clock = () => {
             <h4>Time is {time}</h4>
             <button type='button' onClick={(() => setStart(!start))}>Click me to update the clock!</button>
         </div>
-     );
-}
- 
+    );
+};
+
 export default Clock;

@@ -1,6 +1,13 @@
-import {Link} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 
 const Nav = () => {
+
+    const{id} = useParams();
+
+    const getId = (data) => {
+        getId(data.target.value);
+    };
+
     return ( 
         <div>
             <h3>Nav</h3>
@@ -11,6 +18,8 @@ const Nav = () => {
 
             <Link to="/shop">
                 <h4>Shop</h4>
+                <input type="text" name="my-name" onChange={(event) => getId(event)}/> 
+                <button type='button' path='/shop/:id' exact element={id} onClick={(() => getId(id))}>Click me to go to the product!</button>
                 {/* <button type='button'>Shop</button> */}
             </Link>
 
@@ -28,6 +37,7 @@ const Nav = () => {
                 <h4>Checkout</h4>
                 {/* <button type='button'>Checkout</button> */}
             </Link>
+
         </div>
     );
 }

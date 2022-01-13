@@ -14,15 +14,24 @@ const Bar = () => {
         console.log(beerData);
 
         axios.get(`https://api.punkapi.com/v2/beers`)
-
         .then((response) => {
             setLoaded(true);
 
-            console.log(response);
-            setBeerData(response.data)
-            console.log("===========================");
             console.log(response.data);
-            console.log(beerData);
+
+            response.data.map((beer) => {
+                console.log(beer);
+            })
+            // setBeerData(response)
+            // console.log(response.data[11].name)
+            // console.log("===========================");
+            // console.log(response.data.name);
+            // console.log(beerData);
+
+            response.data.results.map((character) => {
+                console.log(character);
+                console.log(character.name);
+            });
         })
         .catch((error) => {
             setLoaded(true);
@@ -34,7 +43,7 @@ const Bar = () => {
 
     return ( 
         <div>
-
+            <h4>{beerData}</h4>
         </div>
     );
 }

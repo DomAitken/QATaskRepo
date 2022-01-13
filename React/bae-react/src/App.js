@@ -11,7 +11,9 @@ import './css/App.css';
 // import UserPassComp from './components/State/Exercises/UserPassComp';
 // import SearchTable from './components/state-exercises/SearchTable';
 // import Manager from './components/State/Lifting-State/Manager';
-import Clock from './components/useEffect/Clock';
+// import Clock from './components/useEffect/Clock';
+// import HideText from './components/useEffect/Tasks/Read-More/ReadMoreButton';
+import UseEffectTask from './components/useEffect/Tasks/useEffect-Task/useEffectTask';
 
 function App() {
     return (<div className = "App">
@@ -27,7 +29,9 @@ function App() {
         {/* <ControlledInput/> */}
         {/* <SearchTable/> */}
         {/* <Manager/> */}
-        <Clock/>
+        {/* <Clock/> */}
+        {/* <HideText/> */}
+        <UseEffectTask/>
     </div>
     );
 }

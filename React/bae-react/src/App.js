@@ -22,6 +22,7 @@ import About from './components/Routing/About';
 import Shop from './components/Routing/Shop';
 import Forum from './components/Routing/Forum';
 import Checkout from './components/Routing/Checkout';
+import Child from './components/Routing/ChildModule';
 
 function App() {
     return (<div className = "App">
@@ -52,6 +53,8 @@ function App() {
                 <Route path='/forum' exact element={<Forum/>}/>
             
                 <Route path='/checkout' exact element={<Checkout/>}/>
+            
+                <Route path='/child' exact element={<Child/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

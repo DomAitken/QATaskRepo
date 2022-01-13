@@ -20,7 +20,7 @@ import Home from './components/Routing/Home';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import About from './components/Routing/About';
 import Shop from './components/Routing/Shop';
-
+import Forum from './components/Routing/Forum';
 
 
 function App() {
@@ -49,6 +49,7 @@ function App() {
 
                 <Route path="/shop" exact element={<Shop/>}/>
 
+                <Route path='/forum' exact element={<Forum/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

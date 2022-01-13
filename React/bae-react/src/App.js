@@ -24,7 +24,7 @@ import Forum from './components/Routing/Forum';
 import Checkout from './components/Routing/Checkout';
 import Child from './components/Routing/ChildModule';
 // import HookParent from './components/useEffect/Tasks/useEffect-Task/HookParent';
-
+import Bar from './components/RequestHandling/Bar';
 
 function App() {
     return (<div className = "App">
@@ -62,6 +62,7 @@ function App() {
             {/* </Routes> */}
             {/* <Footer/> */}
         {/* </BrowserRouter> */}
+        <Bar/>
     </div>
     );
 }

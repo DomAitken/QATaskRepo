@@ -25,13 +25,12 @@ const Bar = () => {
             console.log(beerData);
         })
         .catch((error) => {
-            
             setLoaded(true);
             setError(error);
         });
     };
 
-    useEffect(getData(),[beerData]);
+    useEffect(getData(), [beerData]);
 
     return ( 
         <div>

@@ -23,6 +23,8 @@ import Shop from './components/Routing/Shop';
 import Forum from './components/Routing/Forum';
 import Checkout from './components/Routing/Checkout';
 import Child from './components/Routing/ChildModule';
+// import HookParent from './components/useEffect/Tasks/useEffect-Task/HookParent';
+
 
 function App() {
     return (<div className = "App">
@@ -43,6 +45,7 @@ function App() {
         {/* <UseEffectTask/> */}
         <BrowserRouter>
             <Nav/>
+            {/* <HookParent/> */}
             <Routes>
                 <Route path="/" exact element={<Home/>}/>
                     

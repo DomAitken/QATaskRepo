@@ -26,13 +26,7 @@ const Bar = () => {
             setLoaded(true);
             setError(error);
         })
-        .then(() => {
-            setTimeout(() => {
-                console.log("=====================");
-                console.log(beerData);
-            }, 2000);
-        })
-    }
+    };
     
     useEffect(getData(), [beerData]);
 

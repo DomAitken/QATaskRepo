@@ -43,25 +43,25 @@ function App() {
         {/* <Clock/> */}
         {/* <HideText/> */}
         {/* <UseEffectTask/> */}
-        <BrowserRouter>
-            <Nav/>
+        {/* <BrowserRouter> */}
+            {/* <Nav/> */}
             {/* <HookParent/> */}
-            <Routes>
-                <Route path="/" exact element={<Home/>}/>
+            {/* <Routes> */}
+                {/* <Route path="/" exact element={<Home/>}/> */}
                     
-                <Route path="/about" exact element={<About/>}/>
+                {/* <Route path="/about" exact element={<About/>}/> */}
 
-                <Route path="/shop/:id" exact element={<Shop/>}/>
+                {/* <Route path="/shop/:id" exact element={<Shop/>}/> */}
 
-                <Route path='/forum' exact element={<Forum/>}/>
+                {/* <Route path='/forum' exact element={<Forum/>}/> */}
             
-                <Route path='/checkout' exact element={<Checkout/>}/>
+                {/* <Route path='/checkout' exact element={<Checkout/>}/> */}
             
-                <Route path='/child' exact element={<Child/>}/>
+                {/* <Route path='/child' exact element={<Child/>}/> */}
             
-            </Routes>
-            <Footer/>
-        </BrowserRouter>
+            {/* </Routes> */}
+            {/* <Footer/> */}
+        {/* </BrowserRouter> */}
     </div>
     );
 }

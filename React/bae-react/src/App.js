@@ -21,7 +21,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import About from './components/Routing/About';
 import Shop from './components/Routing/Shop';
 import Forum from './components/Routing/Forum';
-
+import Checkout from './components/Routing/Checkout';
 
 function App() {
     return (<div className = "App">
@@ -50,6 +50,8 @@ function App() {
                 <Route path="/shop" exact element={<Shop/>}/>
 
                 <Route path='/forum' exact element={<Forum/>}/>
+            
+                <Route path='/checkout' exact element={<Checkout/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

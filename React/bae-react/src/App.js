@@ -15,9 +15,9 @@ import './css/App.css';
 // import HideText from './components/useEffect/Tasks/Read-More/ReadMoreButton';
 // import UseEffectTask from './components/useEffect/Tasks/useEffect-Task/useEffectTask';
 import Nav from './components/Routing/Nav';
-import Footer from './components.Routing/Footer';
+import Footer from './components/Routing/Footer';
 import Home from './components/Routing/Home';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import About from './components/Routing/About';
 import Shop from './components/Routing/Shop';
 
@@ -40,23 +40,18 @@ function App() {
         {/* <Clock/> */}
         {/* <HideText/> */}
         {/* <UseEffectTask/> */}
-        <Router>
+        <BrowserRouter>
             <Nav/>
             <Routes>
-                <Route path="/" exact>
-                    <Home/>
-                </Route>
+                <Route path="/" exact element={<Home/>}/>
+                    
+                <Route path="/about" exact element={<About/>}/>
 
-                <Route path="/about" exact>
-                    <About/>
-                </Route>
+                <Route path="/shop" exact element={<Shop/>}/>
 
-                <Route path="/shop" exact>
-                    <Shop/>
-                </Route>
             </Routes>
             <Footer/>
-        </Router>
+        </BrowserRouter>
     </div>
     );
 }

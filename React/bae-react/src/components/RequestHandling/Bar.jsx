@@ -37,6 +37,7 @@ const Bar = () => {
             setLoaded(true);
             setError(error);
         });
+
     };
 
     useEffect(getData(), [beerData]);
